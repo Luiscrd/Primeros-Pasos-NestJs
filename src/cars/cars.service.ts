@@ -8,21 +8,7 @@ import { CreateCarDto, UpdateCarDto } from './dto';
 export class CarsService {
 
     private cars: Car[] = [
-        {
-            id: uuidv4(),
-            brand: 'Toyota',
-            model: 'Supra-TRD'
-        },
-        {
-            id: uuidv4(),
-            brand: 'Honda',
-            model: 'S-2000'
-        },
-        {
-            id: uuidv4(),
-            brand: 'Mercedes',
-            model: 'SLK-350K'
-        },
+        
     ];
 
     findAll() {
@@ -89,6 +75,12 @@ export class CarsService {
 
         this.cars = this.cars.filter( car => car.id !== id );
 
+    }
+
+    fillCarsWhitSeedData( cars: Car[] ) {
+
+        this.cars = cars;
+        
     }
     
 }
